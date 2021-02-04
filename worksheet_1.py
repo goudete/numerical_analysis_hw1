@@ -3,7 +3,7 @@ import random
 import matplotlib.pyplot as plt
 
 
-#Question 3 code
+#Question 1 code
 def question_one():
     x = [0, 1.5, 3, 4, 5, 7, 9, 10]
     y = []
@@ -23,6 +23,7 @@ def question_two():
         for t_val in t:
             x_val = t_val*math.sin(t_val)
             x.append(x_val)
+        print(' ')
         print('x vals:', x)
 
     def compute_y():
@@ -30,6 +31,7 @@ def question_two():
         for t_val in t:
             y_val = (t_val-1)/(t_val+1)
             y.append(y_val)
+        print(' ')
         print('y vals:', y)
 
     def compute_z():
@@ -37,6 +39,7 @@ def question_two():
         for t_val in t:
             z_val = (math.sin(t_val**2))/(t_val**2)
             z.append(z_val)
+        print(' ')
         print('z vals:', z)
 
     compute_x()
@@ -65,6 +68,7 @@ def question_three():
             y = r * math.sin(t)
             coords.append((x, y))
         print('column vectors x & y:', coords)
+        print(' ')
 
     #Check r
     def check_r():
@@ -95,18 +99,25 @@ def question_four():
     s_100 = sum(x_100)
 
     print('x_50:', x_50)
+    print(' ')
     print('limit_50:', limit_50)
+    print(' ')
     print('s_50:', s_50)
 
+    print(' ')
+    print(' ')
+
     print('x_100:', x_100)
+    print(' ')
     print('limit_100:', limit_100)
+    print(' ')
     print('s_100:', s_100)
 
 def question_five():
     #Create matrix
     m, n = 4, 3
     A = [[random.randint(1,50) for i in range(n)] for j in range(m)]
-    print(A)
+    print("A:", A)
 
     #Get those elements of A that are located in rows 3 to 4 and columns 2 to 3
     sub_A = [[0 for i in range(2)] for j in range(2)]
@@ -114,7 +125,7 @@ def question_five():
         for j in range(1, 3):
             sub_A[i-2][j-1] = A[i][j]
     print("Elements that are located in rows 3 to 4 and columns 2 to 3:", sub_A)
-
+    print(' ')
     #Add a fourth column to A and set it equal to the first column of A.
     extra_col = []
     #get values of new col
@@ -134,11 +145,13 @@ def question_five():
                 A[i][j] = 1
             else:
                 A[i][j] = 0
+    print(' ')
     print("Post replacing submatrix with identity matrix:", A)
 
     #Delete the first and third rows of A.
     A.remove(A[0])
     A.remove(A[2])
+    print(' ')
     print('Post removing first & last row:', A)
 
     #Round off all entries of A towards the nearest integer.
@@ -146,13 +159,14 @@ def question_five():
     for i in range(m):
         for j in range(n):
             A[i][j] = int(A[i][j])
-
+    print(' ')
     print('Post rounding:', A)
 
     string_out = []
     for i in range(m):
         for j in range(n):
             string_out.append(str(A[i][j]))
+    print(' ')
     print('string out elements in row:', string_out)
 
 def question_six():
@@ -190,7 +204,9 @@ def question_six():
                 col_vector_1.append([matrix[i][j]])
             else:
                 col_vector_2.append([matrix[i][j]])
+    print(' ')
     print("Column Vector 1:", col_vector_1)
+    print(' ')
     print("Column Vector 2:", col_vector_2)
 
 
@@ -203,6 +219,7 @@ def question_seven(a, b, c):
     x_neg = (-b - math.sqrt(b**2 - 4*a*c))/(2*a)
 
     print('root 1:', x_pos)
+    print(' ')
     print('root 2:', x_neg)
 
 def question_eight(A, B):
@@ -255,19 +272,19 @@ def question_nine():
 
 #Calling functions
 # question_one()
-print(" ----------------------- ")
+# print("  ")
 # question_two()
-print(" ----------------------- ")
+# print("  ")
 # question_three()
-print(" ----------------------- ")
+# print("  ")
 # question_four()
-print(" ----------------------- ")
+# print("  ")
 # question_five()
-print(" ----------------------- ")
+# print("  ")
 # question_six()
-print(" ----------------------- ")
-# question_seven()
-print(" ----------------------- ")
+# print("  ")
+# question_seven(2, 5, 1)
+# print("  ")
 # question_eight([[1,2,3], [4,5,6]], [[7,8], [9,10], [11,12]])
-print(" ----------------------- ")
+# print("  ")
 question_nine()
